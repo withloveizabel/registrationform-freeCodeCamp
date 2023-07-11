@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <p>Por favor preencha com suas informações:</p>
+    <form action="https://register-demo.freecodecamp.org" method="post"></form>
+    <fieldset>
+        <label for="nome">Digite seu Nome: <input required id="nome" type="text"> </label>
+        <label for="sobrenome">Digite seu Sobrenome: <input required id="sobrenome" type="text"> </label>
+        <label for="email">Digite seu Email: <input required id="email" type="email"> </label>
+        <label for="senha">Digite sua Senha: <input pattern=[a-z0-5]{8,} required id="senha" type="password"> </label>
+        <input type="submit" value="Submit">
+    </fieldset>
+    <fieldset>
+        <label for="conta-pessoal"> <input type="radio" name="tipo-conta" id="conta-pessoal" class="inline"> Conta Pessoal</label>
+        <label for="conta-prof"> <input type="radio" name="tipo-conta" id="conta-prof" class="inline"> Conta Profissional</label>
+        <label for="termos"> <input type="checkbox" required id="termos" name="termos" class="inline"> Eu aceito os <a href="https://www.freecodecamp.org/news/terms-of-service/">termos e condições</a>.</label>
+    </fieldset>
+    <fieldset>
+        <label for="foto-perfil"><input type="file" id="foto-perfil" name="foto-perfil"> Adicione uma foto de perfil:</label>
+        <label for="idade"><input type="number" min="13" max="120" id="idade" name="idade"> Nos diga sua idade:</label>
+        <label for="referencia"> Como você ficou sabendo de mim?
+        <select id="referencia" name="referencia">
+            <option value="">Selecione</option>
+            <option value="1">Perfil do Instagram</option>
+            <option value="2">Perfil do Linkedin</option>
+            <option value="3">Perfil do Twitter</option>
+            <option value="4">Perfil do GitHub</option>
+        </select>
+        </label>
+        <label for="bio"> Defina uma biografia:<textarea id="bio" rows="3" cols="30" placeholder="Eu gosto de codar na praia..." name="bio"></textarea></label>
+    </fieldset>
+</body>
+</html>
